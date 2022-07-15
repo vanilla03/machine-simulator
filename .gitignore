@@ -1,0 +1,5 @@
+# Vscode default files
+.vscode
+# Compiled binaries
+output/*
+*.o

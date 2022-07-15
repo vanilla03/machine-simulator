@@ -1,0 +1,4 @@
+push 1 # push 1 on top of the stack, it should be [1]
+push 1 # push 1 once again [1, 1]
+add # Stack should be [2]
+print # print the [2]

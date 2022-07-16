@@ -30,23 +30,11 @@ void stack_add(Stack *stack, int item) {
 	if(stack->size == stack->capacity) {
 		stack_resize(stack);
 	}
-    // Move all items to the left
-    for(int i = stack->capacity-1; i >= 0; i--) {
-        // Break when it reaches to the first index to avoid bugs
-        if(i == 0)
-            break;
-        stack->array[i] = stack->array[i-1];
-    }
-
-	stack->array[0] = item;
+	stack->array[stack->size] = item;
 	stack->size++;
 }
 // pop off the first number on the stack
 void stack_pop(Stack *stack) {
-    // Move all values up
-	for(int i = 0; i < stack->size; i++) {
-        stack->array[i] = stack->array[i+1]; 
-	}
     // Change last value to 0
     stack->array[stack->size-1] = 0;
     stack->size--;

@@ -14,6 +14,8 @@ Stack new_stack(int capacity);
 void stack_resize(Stack *stack);
 // Add new item
 void stack_add(Stack *stack, int item);
+// Peek the top
+int stack_peek(Stack *stack);
 // Remove first item from stack
 void stack_pop(Stack *stack);
 // Clean the stack

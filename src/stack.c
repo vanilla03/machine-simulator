@@ -33,6 +33,11 @@ void stack_add(Stack *stack, int item) {
 	stack->array[stack->size] = item;
 	stack->size++;
 }
+
+int stack_peek(Stack *stack) {
+	int top = stack->size == 0 ? stack->size : stack->size-1;
+	return stack->array[top];
+}
 // pop off the first number on the stack
 void stack_pop(Stack *stack) {
     // Change last value to 0

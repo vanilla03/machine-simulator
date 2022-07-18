@@ -44,9 +44,6 @@ void stack_pop(Stack *stack) {
     stack->array[stack->size-1] = 0;
     stack->size--;
 }
-int stack_size(Stack *stack) {
-	return stack->size;
-}
 void stack_clean(Stack *stack) {
 	free(stack->array);
 	stack->size = 0;

@@ -48,8 +48,8 @@ void parse_content(char content[256], Stack *stack) {
         }
         push(stack, pushed_value);
     } else if (strncmp(keywords.add, content, 3) == 0) {
-        if(stack->size == 0) {
-            printf("The stack is empty!");
+        if(stack->size == 0 || stack->size == 1) {
+            printf("Error: You cannot add! The stack is either empty or there is only one item inside it.\n");
             exit(EXIT_FAILURE);
         }
         add(stack);

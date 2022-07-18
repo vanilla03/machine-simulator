@@ -18,6 +18,8 @@ void stack_add(Stack *stack, int item);
 int stack_peek(Stack *stack);
 // Remove first item from stack
 void stack_pop(Stack *stack);
+// Return the size 
+int stack_size(Stack *stack);
 // Clean the stack
 void stack_clean(Stack *stack);
 #endif

@@ -71,9 +71,11 @@ void parse_content(char content[256], Stack *stack) {
         if(stack->size > 1) {
             printf("[ ");
             for(int i = 0; i < stack->size; i++) {
-                printf("%i, ", stack->array[i]);
-                if(i == stack->size-1)
+                if(i == stack->size-1) {
                     printf("%i ", stack->array[i]);
+                    break;
+                }
+                printf("%i, ", stack->array[i]);
             }
             printf("]\n");
         }
